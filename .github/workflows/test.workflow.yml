@@ -19,4 +19,4 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          start: pnpm run e2e:headless
+          start: bun run e2e:headless
