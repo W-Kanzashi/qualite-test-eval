@@ -35,17 +35,17 @@ test("Create a task", async () => {
 test("Update a task", async () => {
   await vi.waitFor(() => {
     updateTask({
-      id: 3,
+      id: 1,
       message: "This is an updated task",
       completed: true,
     });
   });
 
-  const task = getTasks(3);
+  const task = getTasks(1);
 
   expect(task).toStrictEqual([
     {
-      id: 3,
+      id: 1,
       message: "This is an updated task",
       completed: true,
     },
@@ -54,10 +54,10 @@ test("Update a task", async () => {
 
 test("Delete a task", async () => {
   await vi.waitFor(() => {
-    deleteTask(4);
+    deleteTask(1);
   });
 
-  const task = getTasks(4);
+  const task = getTasks(1);
 
   expect(task).toEqual([]);
 });
