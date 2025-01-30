@@ -23,4 +23,10 @@ jobs:
       - name: Run unit tests
         run: bun run test:headless
       - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          runTests: false
+          browser: chrome
+          wait-on: "http://localhost:3000"
+          wait-on-timeout: 120
         run: bun run e2e:headless
