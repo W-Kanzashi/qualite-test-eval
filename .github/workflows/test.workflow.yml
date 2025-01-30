@@ -10,8 +10,6 @@ jobs:
         uses: oven-sh/setup-bun@v2
       - name: Checkout
         uses: actions/checkout@v4
-      # Install npm dependencies, cache them correctly
-      # and run all Cypress tests
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
