@@ -14,6 +14,7 @@
     "preview": "next build && next start",
     "start": "next start",
     "test": "vitest",
+    "test:headless": "start-server-and-test dev http://localhost:3000 \"vitest\"",
     "e2e": "cypress open",
     "e2e:headless": "start-server-and-test dev http://localhost:3000 \"cypress run --e2e\"",
     "typecheck": "tsc --noEmit",

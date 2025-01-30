@@ -20,9 +20,9 @@ const tasks = [] as Task[];
 
 /**
  * Get all tasks
- * @param id - Optional task id to filter tasks by
+ * @param {string} id - Optional task id to filter tasks by
  *
- * @returns An array of tasks
+ * @returns {Task[]} An array of tasks
  * @returns An empty array if no tasks are found
  */
 function getTasks(id?: number) {
