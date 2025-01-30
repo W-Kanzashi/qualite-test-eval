@@ -24,3 +24,4 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           start: bun run e2e:headless
+          browser: chrome
