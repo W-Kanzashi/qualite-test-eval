@@ -23,6 +23,6 @@ jobs:
       - name: Run unit tests
         run: bun run test:headless
       - name: Cypress run
+        run: bun run e2e:headless
         with:
-          run: bun run e2e:headless
           browser: chrome
