@@ -29,4 +29,4 @@ jobs:
           browser: chrome
           wait-on: "http://localhost:3000"
           wait-on-timeout: 120
-        run: bun run e2e:headless
+      - run: bun run e2e:headless
