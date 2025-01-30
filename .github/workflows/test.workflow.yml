@@ -24,5 +24,3 @@ jobs:
         run: bun run test:headless
       - name: Cypress run
         run: bun run e2e:headless
-        with:
-          browser: chrome
