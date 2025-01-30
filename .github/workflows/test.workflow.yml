@@ -6,16 +6,16 @@ jobs:
   cypress-run:
     runs-on: ubuntu-24.04
     steps:
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 9
       - name: Install bun
         uses: oven-sh/setup-bun@v2
       - name: Checkout
         uses: actions/checkout@v4
       # Install npm dependencies, cache them correctly
       # and run all Cypress tests
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
       - name: Install dependencies
         run: bun i
       - name: Cypress run
