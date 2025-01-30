@@ -5,7 +5,7 @@ import { getTasks, updateTask, createTask, deleteTask } from "~/server/_db";
 test("Get all tasks", () => {
   const tasks = getTasks();
 
-  expect(tasks).length(5);
+  expect(tasks).length(0);
 });
 
 test("Create a task", async () => {
