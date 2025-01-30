@@ -6,6 +6,10 @@ jobs:
   cypress-run:
     runs-on: ubuntu-24.04
     steps:
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
       - name: Checkout
         uses: actions/checkout@v4
       # Install npm dependencies, cache them correctly
