@@ -33,6 +33,12 @@ function getTasks(id?: number) {
   return tasks;
 }
 
+/**
+ * Create a new task
+ * @param task - The task to create
+ *
+ * @returns The created task
+ */
 function createTask(task: Task) {
   tasks.push(task);
 }

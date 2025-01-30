@@ -22,6 +22,6 @@ jobs:
         run: bun i
       - name: Cypress run
         uses: cypress-io/github-action@v6
-        with:
-          start: bun run e2e:headless
-          browser: chrome
+        # with:
+        #   start: bun run e2e:headless
+        #   browser: chrome

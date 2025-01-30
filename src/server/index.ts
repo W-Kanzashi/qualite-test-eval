@@ -2,6 +2,9 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import { z } from "zod";
+import swaggerUi from "swagger-ui-express";
+import swaggerDocument from "./swagger.json";
+import path from "path";
 
 import {
   getTasks,
@@ -17,6 +20,22 @@ app.use(cors());
 const port = 8080;
 
 app.use(bodyParser.json());
+
+app.use("styles", express.static(path.join(__dirname, "../../out/styles/")));
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+app.get("/", (_req, res) => {
+  res.sendFile(path.join(__dirname, "../../out/global.html"));
+});
+
+app.get("/docs", (_req, res) => {
+  res.sendFile(path.join(__dirname, "../../out/index.html"));
+});
+
+app.get("/docs/db", (_req, res) => {
+  res.sendFile(path.join(__dirname, "../../out/index.ts.html"));
+});
 
 app.get("/tasks", (_req, res) => {
   const tasks = getTasks();
