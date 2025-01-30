@@ -6,7 +6,7 @@
   "scripts": {
     "build": "next build",
     "check": "next lint && tsc --noEmit",
-    "dev": "concurrently \"bun run dev:front\" \"bun run --watch ./src/server/index.ts\" &",
+    "dev": "concurrently \"bun run dev:front\" \"bun run --watch ./src/server/index.ts\"",
     "dev:front": "next dev --turbo",
     "docs": "jsdoc -c jsdoc.json",
     "lint": "next lint",
