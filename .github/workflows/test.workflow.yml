@@ -17,4 +17,4 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          start: npm e2e:headless
+          start: pnpm run e2e:headless
