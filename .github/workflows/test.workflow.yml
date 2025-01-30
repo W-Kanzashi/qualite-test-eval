@@ -10,6 +10,8 @@ jobs:
         uses: pnpm/action-setup@v4
         with:
           version: 9
+      - name: Install bun
+        uses: oven-sh/setup-bun@v2
       - name: Checkout
         uses: actions/checkout@v4
       # Install npm dependencies, cache them correctly
