@@ -14,7 +14,7 @@
     "start": "next start",
     "test": "vitest",
     "e2e": "cypress open",
-    "e2e:headless": "start-server-and-test dev http://localhost:3000 \"cypress run --e2e\"",
+    "e2e:headless": "start-server-and-test dev:front http://localhost:3000 \"cypress run --e2e\"",
     "typecheck": "tsc --noEmit",
     "format:write": "prettier --write \"**/*.{ts,tsx,js,jsx,mdx}\" --cache",
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,mdx}\" --cache"
