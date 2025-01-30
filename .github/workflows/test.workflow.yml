@@ -23,6 +23,6 @@ jobs:
       - name: Run unit tests
         run: bun run test:headless
       - name: Cypress run
-        uses: cypress-io/github-action@v6
         with:
+          run: bun run e2e:headless
           browser: chrome
